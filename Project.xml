@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<project>
+<project xmlns="http://lime.software/project/1.0.3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://lime.software/project/1.0.3 http://lime.software/xsd/project-1.0.3.xsd">
 	<!-- _________________________ Application Settings _________________________ -->
 
-	<app title="Ritz" file="Ritz" main="Main" version="1.0.0" company="HaxeFlixel" />
+	<app title="Ritz" file="Ritz" packageName="com.ninjamuffin99.ritz" package="com.ninjamuffin99.ritz" main="Main" version="1.0.0" company="ninjamuffin99" />
 
 	<!--The flixel preloader is not accurate in Chrome. You can use it regularly if you embed the swf into a html file
 		or you can set the actual size of your file manually at "FlxPreloaderBase-onUpdate-bytesTotal"-->
@@ -45,7 +46,7 @@
 	<haxelib name="flixel-ui" />
 	<haxelib name="zerolib" />
 	<haxelib name="zerolib-flixel" />
-	<haxelib name="newgrounds" />
+	<haxelib name="newgrounds" unless='switch' />
 	
 	<!--In case you want to use nape with flixel-->
 	<!--<haxelib name="nape-haxe4" />-->
@@ -85,13 +86,8 @@
 	<!-- _________________________________ Custom _______________________________ -->
 
 	<haxedef name="SKIP_TO_PLAYSTATE" if="debug" />
-	<section if="newgrounds">
-		<haxedef name="NG_LOGIN" />
-		<!-- <haxedef name="NG_LURKER" /> -->
-		<haxedef name="NG_DEBUG" if="debug"/>
-		<haxedef name="NG_DEBUG_SESSION" if="debug" />
-	</section >
 	
 	<!--Place custom nodes like icons here (higher priority to override the HaxeFlixel icon)-->
-	<icon path="assets/images/icon.png" />
+
+	<icon path="art/icon.png" />
 </project>

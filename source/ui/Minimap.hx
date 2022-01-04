@@ -1,5 +1,6 @@
 package ui;
 
+import flixel.group.FlxGroup.FlxTypedGroup;
 import data.OgmoTilemap;
 
 import flixel.FlxCamera;
@@ -8,15 +9,12 @@ import flixel.math.FlxRect;
 import flixel.tile.FlxBaseTilemap;
 import flixel.tile.FlxTilemap;
 
-import zero.flixel.utilities.FlxOgmoUtils;
-import zero.utilities.OgmoUtils;
-
 using zero.utilities.OgmoUtils;
 using zero.flixel.utilities.FlxOgmoUtils;
 
 typedef PositionMap = Map<Int, FlxPoint>;
 
-class Minimap extends flixel.group.FlxGroup
+class Minimap extends FlxTypedGroup<Dynamic>
 {
     inline public static var OLD_TILE_SIZE = 32;
     inline public static var TILE_SIZE = 8;
@@ -29,7 +27,7 @@ class Minimap extends flixel.group.FlxGroup
     
     public final checkpoints:PositionMap = [];
     public final cheese:PositionMap = [];
-    final map:MiniTilemap;
+    var map:MiniTilemap;
     final fog:FlxTilemap;
     
     public function new (levelPath:String)

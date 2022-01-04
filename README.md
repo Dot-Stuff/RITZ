@@ -8,16 +8,19 @@ This should be it's entire source code. It uses [OGMO 3](https://ogmo-editor-3.g
 
 You can play the game on Newgrounds: https://www.newgrounds.com/portal/view/746874
 
+## Credits / shoutouts
 
-# CREDS
-### ART
-- MKMAFFO
-- DEEGEEMIN
-### MUSIC
-- KAWAISPRITE
-### PROGRAMMING
-- NINJAMUFFIN99
-- GEOKURELI
+- [ninjamuffin99](https://twitter.com/ninja_muffin99) and [George Kurelic](https://twitter.com/Geokureli) - Programmer
+- [MKMaffo](https://twitter.com/MKMaffo) and [DIGIMIN](https://twitter.com/deegeemin) - Art
+- [Kawaisprite](https://twitter.com/kawaisprite) - Musician
+
+## Build instructions
+
+```
+haxelib install newgrounds
+haxelib install zerolib
+haxelib install zerolib-flixel
+```
 
 # Changes From the Pixel day version
 ## Player Movement

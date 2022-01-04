@@ -29,7 +29,7 @@ class NGio
 		trace("connecting to newgrounds");
 		
 		
-		NG.createAndCheckSession(api, #if NG_DEBUG true #else false #end, sessionId);
+		NG.createAndCheckSession(api, #if debug true #else false #end, sessionId);
 		
 		NG.core.verbose = true;
 		// Set the encryption cipher/format to RC4/Base64. AES128 and Hex are not implemented yet

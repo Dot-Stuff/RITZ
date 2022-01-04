@@ -27,6 +27,6 @@ class Obstacle extends FlxSprite
     }
     static function processCallback(obstacle:Obstacle, victim:FlxBasic):Bool
     {
-        return !Std.is(victim, FlxObject) || obstacle.hitObject(cast victim);
+        return !Std.isOfType(victim, FlxObject) || obstacle.hitObject(cast victim);
     }
 }
